@@ -1,0 +1,4 @@
+define service ZUI_CONFIGURATIONFORINV {
+  expose ZC_CONFIGURATIONFORINV_S as ConfigurationForAll;
+  expose ZC_CONFIGURATIONFORINV as ConfigurationForInv;
+}

@@ -1,0 +1,55 @@
+@Metadata.layer: #CUSTOMER
+@UI: {
+  headerInfo: {
+    typeName: 'ConfigurationForInv', 
+    typeNamePlural: 'ConfigurationForInvs', 
+    title: {
+      type: #STANDARD, 
+      label: 'Configuration for Inventory Aging', 
+      value: 'Bukrs'
+    }
+  }
+}
+annotate view ZC_ConfigurationForInv with
+{
+  @UI.identification: [ {
+    position: 1 
+  } ]
+  @UI.lineItem: [ {
+    position: 1 
+  }, 
+  {
+    type: #FOR_ACTION, 
+    dataAction: 'CopyConfigurationForInv', 
+    label: 'Copy Selected Entry'
+  } ]
+  @UI.facet: [ {
+    id: 'ZI_ConfigurationForInv', 
+    purpose: #STANDARD, 
+    type: #IDENTIFICATION_REFERENCE, 
+    label: 'Configuration for Inventory Aging', 
+    position: 1 
+  } ]
+  Bukrs;
+  
+  @UI.identification: [ {
+    position: 2 
+  } ]
+  @UI.lineItem: [ {
+    position: 2 
+  } ]
+  Movementtype;
+  
+  @UI.identification: [ {
+    position: 3 
+  } ]
+  @UI.lineItem: [ {
+    position: 3 
+  } ]
+  Inuse;
+  
+  @UI.identification: [ {
+    position: 4 
+  } ]
+  Lastchangeddatetime;
+}

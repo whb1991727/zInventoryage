@@ -1,0 +1,4 @@
+@EndUserText.label: 'material stock age service'
+define service Zsd_material_stock_age {
+  expose z_material_stock_age;
+}
